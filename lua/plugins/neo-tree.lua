@@ -8,7 +8,6 @@ return {
         return
       end
 
-      opts.filesystem.hide_dot_files = false
       opts.default_component_configs = opts.default_component_configs or {}
 
       local icon = opts.default_component_configs.icon or {}
@@ -24,6 +23,13 @@ return {
       end
 
       opts.default_component_configs.icon = icon
+
+      -- Show dot files by default
+      opts.filesystem = opts.filesystem or {}
+      opts.filesystem.filtered_items = opts.filesystem.filtered_items or {}
+      opts.filesystem.filtered_items.visible = true
+      opts.filesystem.filtered_items.hide_dotfiles = false
+      opts.filesystem.filtered_items.hide_gitignored = false
     end,
   },
 }
