@@ -6,4 +6,4 @@ vim.g.lazyvim_picker = "telescope"
 
 vim.g.ai_cmp = true
 
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
