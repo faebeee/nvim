@@ -30,6 +30,9 @@ return {
       opts.filesystem.filtered_items.visible = true
       opts.filesystem.filtered_items.hide_dotfiles = false
       opts.filesystem.filtered_items.hide_gitignored = false
+
+      opts.filters = opts.filters or {}
+      opts.filters.custom = { "node_modules" }
     end,
   },
 }
