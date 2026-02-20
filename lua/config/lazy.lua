@@ -22,21 +22,6 @@ require("lazy").setup({
     } },
     -- import/override with your plugins
     { import = "plugins" },
-    {
-      "pmizio/typescript-tools.nvim",
-      dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-      opts = {
-        settings = {
-          tsserver_paths = {},
-          tsserver = {
-            disable = true,
-          },
-          ts_ls = {
-            disable = true,
-          },
-        },
-      },
-    },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
