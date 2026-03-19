@@ -15,3 +15,23 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help ta
 -- LSP keymaps
 --vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 --vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+
+-- Session Persistence
+vim.keymap.set("n", "<leader>qs", function()
+  require("persistence").load()
+end, { desc = "Session Load" })
+
+-- select a session to load
+vim.keymap.set("n", "<leader>qS", function()
+  require("persistence").select()
+end, { desc = "Session Select" })
+
+-- load the last session
+vim.keymap.set("n", "<leader>ql", function()
+  require("persistence").load({ last = true })
+end, { desc = "Load last session" })
+
+-- stop Persistence => session won't be saved on exit
+vim.keymap.set("n", "<leader>qd", function()
+  require("persistence").stop()
+end, { desc = "Quit without saving session" })
