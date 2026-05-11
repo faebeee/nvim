@@ -2,7 +2,8 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
-      ts_ls = { enabled = false },
+      --ts_ls = { enabled = false },
+      mdx_analyzer = {},
     },
   },
 }

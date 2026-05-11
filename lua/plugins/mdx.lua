@@ -7,17 +7,6 @@ return {
       vim.list_extend(opts.ensure_installed, { "markdown", "markdown_inline", "mdx" })
     end,
   },
-
-  -- mdx-analyzer LSP
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        mdx_analyzer = {},
-      },
-    },
-  },
-
   -- Extend render-markdown to handle mdx filetype
   {
     "MeanderingProgrammer/render-markdown.nvim",
