@@ -44,7 +44,7 @@ vim.keymap.set("i", "<M-]>", function()
   require("copilot.suggestion").next()
 end)
 
-vim.keymap.set("i", "<M-a>", function()
+vim.keymap.set("i", "<C-a>", function()
   require("copilot.suggestion").accept()
 end)
 
