@@ -3,7 +3,7 @@ return {
   opts = {
     servers = {
       --ts_ls = { enabled = false },
-      mdx_analyzer = {},
+      copilot = { enabled = true },
     },
   },
 }

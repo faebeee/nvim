@@ -3,4 +3,5 @@
 -- Add any additional options here
 
 vim.g.lazyvim_picker = "telescope"
+vim.g.ai_cmp = true
 vim.opt.relativenumber = false
